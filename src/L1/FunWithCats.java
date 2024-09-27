@@ -11,14 +11,14 @@ public class FunWithCats
 
         // the variable "cat1" is an object of type Cat
         // (an instance of the Cat class)
-        Cat cat1 = new Cat("orange", "Bubbles", 2, false);
-        cat1.printCatInfo();
+//        Cat cat1 = new Cat("orange", "Bubbles", 2, false);
+//        cat1.printCatInfo();
 
 
         // let's make a new object of type Cat and call it "cat2"
         // cat2 has a new set of attributes from cat1
-        Cat cat2 = new Cat("spotted brown", "Monster", 7, true);
-        cat2.printCatInfo();
+//        Cat cat2 = new Cat("spotted brown", "Monster", 7, true);
+//        cat2.printCatInfo();
 
 
        /* Exercise 1: uncomment lines 27 and 28 below, then run the code again.
@@ -55,6 +55,12 @@ public class FunWithCats
        // try adding a new method, figure out what certain words mean, etc.
        */
 
+        Cat youngCat = new Cat("green", "shrek", 2, true);
+        Cat oldCat = youngCat.clone();
+        oldCat.inYears(2);
+
+        youngCat.printCatInfo();
+        oldCat.printCatInfo();
     }
 }
 

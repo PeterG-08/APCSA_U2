@@ -10,6 +10,7 @@ public class Cat
     private int age;
     private boolean isSleeping;
 
+    private final int COLOR_CHANGE_AGE = 10;
 
     /* Below is the Cat class "constructor" method;
         this special method creates Cat objects
@@ -26,6 +27,17 @@ public class Cat
    /* Below are the Cat class "instance methods": these are the "behaviors"
        that a Cat object can "do" (or have done to it)
    */
+
+    /**
+     * Changes the cat, so it represents this same cat in after the passed in years.
+     */
+    public void inYears(int years) {
+        age += years;
+
+        if (age > COLOR_CHANGE_AGE) {
+            color = "black";
+        }
+    }
 
 
     // This "method" puts the cat to sleep by setting isSleeping to true
@@ -62,6 +74,11 @@ public class Cat
 
         // print an extra blank line at the end
         System.out.println();
+    }
+
+    @Override
+    protected Cat clone() {
+        return new Cat(color, name, age, isSleeping);
     }
 }
 
